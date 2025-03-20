@@ -35,6 +35,21 @@ The challenges are organized by category or type. Below are the primary categori
 6. **Miscellaneous**
     - A collection of various challenges that don't fit into the categories above but are still valuable in honing cybersecurity skills.
 
+7. **AI (Artificial Intelligence)**
+    - Writeups for challenges that involve machine learning algorithms, AI tools, and utilizing AI for solving security-related problems.
+
+8. **Binary Exploitation (BinExp)**
+    - Solutions for challenges involving the analysis of compiled binaries to find vulnerabilities and exploit them.
+
+9. **Hardware**
+    - Challenges related to hardware exploitation or interfacing with embedded systems.
+
+10. **Network**
+    - Solutions that focus on network security, including challenges related to packet analysis, man-in-the-middle attacks, and more.
+
+11. **Steganography**
+    - Challenges that require hiding or uncovering information embedded in digital media files such as images, audio, or video.
+
 ## How to Use This Repository
 
 1. Clone this repository to your local machine:
