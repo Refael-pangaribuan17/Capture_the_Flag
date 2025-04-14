@@ -24,6 +24,5 @@ Writeup ditulis untuk tujuan dokumentasi, pembelajaran, dan berbagi strategi pen
 Mahasiswa tingkat akhir dengan minat di bidang keamanan siber dan DevOps. Aktif mengikuti CTF untuk memperdalam pemahaman dan pengalaman praktis.
 
 ---
-
-> ⚠️ Flag tidak disertakan untuk menjaga sportivitas kompetisi.  
+  
 > 💡 “The flag isn’t the goal. Understanding how to get it is.”
