@@ -1,0 +1,30 @@
+name: Verifier la pull request
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  perimetre:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Seuls les fichiers de community-writeups sont autorisés
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+          AUTEUR: ${{ github.event.pull_request.user.login }}
+        run: |
+          fichiers=$(gh pr diff "$PR" --repo "$REPO" --name-only)
+          echo "$fichiers"
+          # Les propriétaires du dépôt peuvent modifier le reste.
+          if [ "$AUTEUR" = "PercevalFox" ]; then exit 0; fi
+          mauvais=$(echo "$fichiers" | grep -v -E '^community-writeups/[a-z0-9-]+/[A-Za-z0-9_.-]+\.md$' || true)
+          if [ -n "$mauvais" ]; then
+            echo "::error::Fichiers non autorisés :"
+            echo "$mauvais"
+            exit 1
+          fi
